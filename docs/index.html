@@ -44,7 +44,7 @@
                 style="color: blue;">EV</span>idential Traversability Learning for Risk-Aware <span
                 style="color: blue;">O</span>ff-<span style="color: blue;">R</span>oad <span
                 style="color: blue;">A</span>utonomy</h1>
-            <h3 class="title is-4 conference-authors">IEEE Transactions on Robotics</h3>
+            <!-- <h3 class="title is-4 conference-authors">IEEE Transactions on Robotics</h3> -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a target="_blank" href="https://scholar.google.com/citations?user=Vkn0uq4AAAAJ&hl=en">Xiaoyi
@@ -66,16 +66,16 @@
               </span>
               <span class="author-block">
                 <a target="_blank" href="https://www.linkedin.com/in/stephen-phillips-4ab09935/">Stephen
-                  Philips</a><sup>3</sup>
+                  Philips</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://www.robo.guru/about.html">Jiuguang Wang</a><sup>3</sup>
+                <a target="_blank" href="https://www.robo.guru/about.html">Jiuguang Wang</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://mfe7.github.io">Michael Everett</a><sup>4</sup>
+                <a target="_blank" href="https://mfe7.github.io">Michael Everett</a><sup>4</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://aeroastro.mit.edu/people/nicholas-roy/">Nicholas Roy</a><sup>1</sup>
+                <a target="_blank" href="https://aeroastro.mit.edu/people/nicholas-roy/">Nicholas Roy</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a target="_blank" href="https://aeroastro.mit.edu/people/jonathan-p-how/">Jonathan P.
@@ -85,7 +85,7 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology,</span>
-              <span class="author-block"><sup>2</sup>EVCOM Army Research Laboratory, </span>
+              <span class="author-block"><sup>2</sup>DEVCOM Army Research Laboratory, </span>
               <br>
               <span class="author-block"><sup>3</sup>Boston Dynamics AI Institute, </span>
               <span class="author-block"><sup>4</sup>Northeastern University</span>
@@ -135,7 +135,7 @@
                 </span>
 
                 <!-- Code Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a target="_blank" href="https://github.com/bdaiinstitute/offroad_spot"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -143,7 +143,7 @@
                     </span>
                     <span>Code - offroad_spot</span>
                   </a>
-                </span>
+                </span> -->
               </div>
             </div>
           </div>
@@ -161,25 +161,12 @@
               style="width: 75%; height: auto;">
           </div>
           <br>
-          <h2 class="subtitle has-text-centered">
-            Overview of the EVORA <b>uncertainty-aware traversability learning</b> and <b>risk-aware navigation</b>
-            pipeline.
+          <!-- <h2 class="subtitle has-text-centered"> -->
+            <h2 class="subtitle">
+            Overview of the <span style="color: blue;">EVORA</span> <b>uncertainty-aware traversability learning</b> and <b>risk-aware navigation</b> pipeline. 
+            To handle <i>aleatoric uncertainty</i>, <span style="color: blue;">EVORA</span> learns empirical traction distributions and uses the conditional value at risk (CVaR) of traction to forward simulate robot states.
+            To handle <i>epistemic uncertainty</i>, <span style="color: blue;">EVORA</span> estimates the densities of traction predictor's latent features to identify and avoid out-of-distribution (OOD) terrains.
           </h2>
-          <div style="text-align: center;">
-            <ol type="a" style="text-align: left; max-width: 75%; display: inline-block;">
-              <li>Real-world traction is noisy and typically multi-modal (aleatoric uncertainty), and traction models
-                trained with limited data are unreliable in novel terrains (epistemic uncertainty).</li>
-              <li>We learn empirical traction distributions to capture aleatoric uncertainty and measure epistemic
-                uncertainty using the probability density of the traction predictor's latent features. Leveraging ideas
-                from evidential deep learning, the traction distributions and density estimates are combined to form a
-                Dirichlet distribution and jointly trained using the proposed uncertainty-aware loss.</li>
-              <li>To account for aleatoric uncertainty, we propose a risk-aware planner based on a sampling-based model
-                predictive control (MPC) method that uses the left-tail conditional value at risk (CVaR) of the traction
-                distribution to forward simulate the robot states. To handle epistemic uncertainty, we threshold the
-                densities of the traction predictor's latent features in order to identify and avoid out-of-distribution
-                (OOD) terrains with unreliable traction predictions.</li>
-            </ol>
-          </div>
         </div>
       </div>
     </div>
@@ -221,19 +208,21 @@
   <!-- Indoor -->
   <section class="section">
     <div class="container is-max-widescreen">
-      <h2 class="title">Hardware Experiments</h2>
+      <h2 class="title">Indoor Planner Benchmark (2 laps)</h2>
       <div class="rows">
-        <h3 class="subtitle">Indoor RC Car Experiments (2 laps in total)</h3>
+        <!-- <h3 class="subtitle">Indoor RC Car Experiments </h3> -->
         <div class="container">
           <div class="columns is-vcentered  is-centered">
-            <img src="static/images/rc_env_highlevel.png" alt="rc_env_highlevel" style="width: 75%; height: auto;">
+            <img src="static/images/rc_env_highlevel.png" alt="rc_env_highlevel" style="width: 100%; height: auto;">
           </div>
-          <div style="text-align: center;">
+          <!-- <div style="text-align: center;"> -->
+            <p>
             The training and test environments used for the indoor racing experiments. Note that the bi-modality of
             traction distribution over the vegetation could cause the robot to slow down significantly. During testing,
             the robot was tasked to drive two laps following a carrot goal along the reference path while deciding
             between a detour without vegetation and a shorter path with vegetation.
-          </div>
+          </p>
+          <!-- </div> -->
         </div>
       </div>
       <br>
@@ -257,10 +246,10 @@
       <div class="rows">
         <div class="columns">
           <div class="column has-text-centered">
-            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Dyn (proposed)</h4>
+            <h4 class="subtitle" style="margin-bottom: 10px"><span style="color: green;">CVaR-Dyn (proposed)</span></h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
-                <li>Best time-to-goal and success rate</li>
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                <li><b>Best time-to-goal and success rate</b></li>
                 <li>Risk tolerance alpha = 0.8</li>
                 <li>The robot preemptively turned early to go through the shortcut. </li>
               </ol>
@@ -269,16 +258,16 @@
           <div class="column has-text-centered">
             <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Cost</h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
                 <li>Risk tolerance alpha = 1.0</li>
-                <li>Conservative — the robot consistently took the safer detours.</li>
+                <li>Conservative. The robot consistently took the safer detours.</li>
               </ol>
             </div>
           </div>
           <div class="column has-text-centered">
             <h4 class="subtitle" style="margin-bottom: 10px">Baseline</h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
                 <li>Soft vegetation penalty = 10</li>
                 <li>The robot suffered from understeering and collided with obstacles.</li>
               </ol>
@@ -291,22 +280,20 @@
   </section>
   <!--/ Indoor -->
 
-  <!-- Outdoor -->
+  <!-- Outdoor Planner Benchmark -->
   <section class="section">
     <div class="container is-max-widescreen">
 
       <div class="rows">
-        <h3 class="subtitle">Outdoor Experiments with a Quadruped Robot (3 round trips in total)</h3>
+        <h2 class="title">Outdoor Planner Benchmark (3 round trips)</h2>
         <div class="container">
           <div class="columns is-vcentered is-centered">
-            <img src="static/images/spot_env_highlevel.png" alt="spot_env_highlevel" style="width: 75%; height: auto;">
+            <img src="static/images/spot_env_highlevel.png" alt="spot_env_highlevel" style="width: 100%; height: auto;">
           </div>
-          <div style="text-align: center;">
-            The outdoor environment consisted of vegetation terrains with different heights and densities. Unlike
+          <p>The outdoor environment consisted of vegetation terrains with different heights and densities. Unlike
             wheeled robots, a legged robot typically has good linear traction through vegetation, but angular traction
             may exhibit multi-modality due to the greater difficulty of turning. During testing, two start-goal pairs
-            were used to benchmark the planners and analyze the benefits of avoiding OOD terrains.
-          </div>
+            were used to benchmark the planners and analyze the benefits of avoiding OOD terrains.</p>
         </div>
       </div>
       <br>
@@ -329,10 +316,10 @@
       <div class="rows">
         <div class="columns">
           <div class="column has-text-centered">
-            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Dyn (proposed)</h4>
+            <h4 class="subtitle" style="margin-bottom: 10px"><span style="color: green;">CVaR-Dyn (proposed)</span></h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
-                <li>Best time-to-goal</li>
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                <li><b>Best time-to-goal</b></li>
                 <li>Risk tolerance alpha = 0.9</li>
                 <li>The robot walked very closely to the tall grass.</li>
               </ol>
@@ -341,7 +328,7 @@
           <div class="column has-text-centered">
             <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Cost</h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
                 <li>Risk tolerance alpha = 0.8</li>
                 <li>A lot of unnecessary turns due to poor solution quality.</li>
               </ol>
@@ -350,36 +337,62 @@
           <div class="column has-text-centered">
             <h4 class="subtitle" style="margin-bottom: 10px">Baseline</h4>
             <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 60%; display: inline-block;">
-                <li>Grass / bush penalty = 20</li>
+              <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                <li>Penalty for grass and bushes = 20</li>
                 <li>The robot walked away from tall grass to stay on easier terrain.</li>
               </ol>
             </div>
           </div>
         </div>
       </div>
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h4 class="subtitle" style="margin-bottom: 10px">Benefits of Avoiding OOD Terrains</h4>
-            <div style="text-align:center;">
-              <ol style="text-align: left; max-width: 80%; display: inline-block;">
-                <li>By avoiding OOD terrains, the planner was less prone to getting stuck in local minima due to
-                  imperfect map information and unreliable traction estimation.</li>
-                <li>Without avoiding OOD terrains, the planner was stuck in local minima and the human had to intervene.
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="column has-text-centered">
-            <iframe src="https://www.youtube.com/embed/8L5t4nYg1ak?si=7wV7DCmVblEJempi"
-              allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
-  <!--/ Outdoor -->
+    <!-- Outdoor Planner Benchmark -->
+
+
+
+
+  <!-- Outdoor OOD -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <h2 class="title">Outdoor OOD Avoidance Demonstration</h2>
+        <div class="container">
+
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <!-- <div class="publication-video"> -->
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/8L5t4nYg1ak?si=7wV7DCmVblEJempi"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <br>
+            <ol style="text-align: left; max-width: 100%; display: inline-block;">
+              <li>By avoiding OOD terrains, the planner was less prone to getting stuck in local minima due to
+                imperfect map information and unreliable traction estimation.</li>
+              <li>Without avoiding OOD terrains, the planner was stuck in local minima and the human had to intervene.
+              </li>
+            </ol>
+          </div>
+          
+
+          <div class="columns is-centered has-text-centered">
+            <div style="text-align:center;">
+
+            </div>
+          </div>
+            
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- Outdoor OOD -->
+
 
   <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
