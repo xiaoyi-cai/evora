@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy">
+  <meta name="keywords" content="Traversability Analysis, Navigation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy</title>
+
+  <!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans,Noto+Sans,Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span style="color: blue;">EVORA</span>: Deep <span
+                style="color: blue;">EV</span>idential Traversability Learning for Risk-Aware <span
+                style="color: blue;">O</span>ff-<span style="color: blue;">R</span>oad <span
+                style="color: blue;">A</span>utonomy</h1>
+            <h3 class="title is-4 conference-authors">IEEE Transactions on Robotics</h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://scholar.google.com/citations?user=Vkn0uq4AAAAJ&hl=en">Xiaoyi
+                  Cai</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://siddancha.github.io">Siddharth Ancha</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://www.lakshaysharma.com">Lakshay Sharma</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://scholar.google.com/citations?user=IcbuLWkAAAAJ&hl=en">Philip R.
+                  Osteen</a><sup>2</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a target="_blank" href="https://bucherb.github.io">Bernadette Bucher</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://www.linkedin.com/in/stephen-phillips-4ab09935/">Stephen
+                  Philips</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://www.robo.guru/about.html">Jiuguang Wang</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://mfe7.github.io">Michael Everett</a><sup>4</sup>
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://aeroastro.mit.edu/people/nicholas-roy/">Nicholas Roy</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://aeroastro.mit.edu/people/jonathan-p-how/">Jonathan P.
+                  How</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Massachusetts Institute of Technology,</span>
+              <span class="author-block"><sup>2</sup>EVCOM Army Research Laboratory, </span>
+              <br>
+              <span class="author-block"><sup>3</sup>Boston Dynamics AI Institute, </span>
+              <span class="author-block"><sup>4</sup>Northeastern University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="evora.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Under Submission)</span>
+                  </a>
+                </span>
+
+                <!-- Arxiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="evora.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file"></i>
+                    </span>
+                    <span>ArXiv (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/mit-acl/mppi_numba"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code - mppi_numba</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/bdaiinstitute/offroad_spot"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code - offroad_spot</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-fullhd">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered  is-centered">
+            <img src="static/images/intro_figure_overall_architecture.png" alt="intro_figure_overall_architecture"
+              style="width: 75%; height: auto;">
+          </div>
+          <br>
+          <h2 class="subtitle has-text-centered">
+            Overview of the EVORA <b>uncertainty-aware traversability learning</b> and <b>risk-aware navigation</b>
+            pipeline.
+          </h2>
+          <div style="text-align: center;">
+            <ol type="a" style="text-align: left; max-width: 75%; display: inline-block;">
+              <li>Real-world traction is noisy and typically multi-modal (aleatoric uncertainty), and traction models
+                trained with limited data are unreliable in novel terrains (epistemic uncertainty).</li>
+              <li>We learn empirical traction distributions to capture aleatoric uncertainty and measure epistemic
+                uncertainty using the probability density of the traction predictor's latent features. Leveraging ideas
+                from evidential deep learning, the traction distributions and density estimates are combined to form a
+                Dirichlet distribution and jointly trained using the proposed uncertainty-aware loss.</li>
+              <li>To account for aleatoric uncertainty, we propose a risk-aware planner based on a sampling-based model
+                predictive control (MPC) method that uses the left-tail conditional value at risk (CVaR) of the traction
+                distribution to forward simulate the robot states. To handle epistemic uncertainty, we threshold the
+                densities of the traction predictor's latent features in order to identify and avoid out-of-distribution
+                (OOD) terrains with unreliable traction predictions.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Fast navigation in the wild requires identifying regions with good traction where a robot can reliably
+              achieve desired velocities, which can be learned by a neural network in a self-supervised fashion.
+              However, real-world traction data is often noisy and contains randomness that cannot be reduced with more
+              data (aleatoric uncertainty) and the scarcity makes learned models unreliable in novel terrains (epistemic
+              uncertainty). To fully exploit the learned traction models, this work explicitly and efficiently
+              quantifies aleatoric and epistemic uncertainties via evidential deep learning, by predicting distributions
+              over discretized traction values and estimating the probability density of the network's latent features,
+              respectively. Moreover, we propose an uncertainty-aware squared Earth Mover's Distance loss that better
+              captures the cross-bin relationships among discrete traction values, can be computed analytically in
+              closed form, and leads to better navigation performance than cross-entropy based losses. During
+              deployment, when traction predictions are reliable, we design a risk-aware planner based on the worst-case
+              expected traction in order to trade off the risk of getting stuck and the potential time savings from
+              traversing terrains with uncertain traction. When the learned models are unreliable, we show that avoiding
+              the associated terrains via auxiliary planning costs improves navigation success rate. The overall
+              approach is extensively analyzed in simulation and on wheeled and quadruped robot platforms, demonstrating
+              improved navigation, real-world feasibility, and generalization across different ground robots.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+    </div>
+  </section>
+
+  <!-- Indoor -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <h2 class="title">Hardware Experiments</h2>
+      <div class="rows">
+        <h3 class="subtitle">Indoor RC Car Experiments (2 laps in total)</h3>
+        <div class="container">
+          <div class="columns is-vcentered  is-centered">
+            <img src="static/images/rc_env_highlevel.png" alt="rc_env_highlevel" style="width: 75%; height: auto;">
+          </div>
+          <div style="text-align: center;">
+            The training and test environments used for the indoor racing experiments. Note that the bi-modality of
+            traction distribution over the vegetation could cause the robot to slow down significantly. During testing,
+            the robot was tasked to drive two laps following a carrot goal along the reference path while deciding
+            between a detour without vegetation and a shorter path with vegetation.
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="rows">
+        <div class="columns">
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/V8iVogEJOLs?si=HAKIRyS9M4M3Zte9"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/EEsYEopPt2k?si=pRzD3KOyRnjh3PVp"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/FeGrMMpwYfw?si=FT4gth9FWGP8Vjyu"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Dyn (proposed)</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Best time-to-goal and success rate</li>
+                <li>Risk tolerance alpha = 0.8</li>
+                <li>The robot preemptively turned early to go through the shortcut. </li>
+              </ol>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Cost</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Risk tolerance alpha = 1.0</li>
+                <li>Conservative — the robot consistently took the safer detours.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">Baseline</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Soft vegetation penalty = 10</li>
+                <li>The robot suffered from understeering and collided with obstacles.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--/ Indoor -->
+
+  <!-- Outdoor -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="rows">
+        <h3 class="subtitle">Outdoor Experiments with a Quadruped Robot (3 round trips in total)</h3>
+        <div class="container">
+          <div class="columns is-vcentered is-centered">
+            <img src="static/images/spot_env_highlevel.png" alt="spot_env_highlevel" style="width: 75%; height: auto;">
+          </div>
+          <div style="text-align: center;">
+            The outdoor environment consisted of vegetation terrains with different heights and densities. Unlike
+            wheeled robots, a legged robot typically has good linear traction through vegetation, but angular traction
+            may exhibit multi-modality due to the greater difficulty of turning. During testing, two start-goal pairs
+            were used to benchmark the planners and analyze the benefits of avoiding OOD terrains.
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="rows">
+        <div class="columns">
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/1EFt5KMJzpE?si=kKvC2Hetu_7AZV3w"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/BVVPLXb1_rE?si=0TiW8DqDuLAjGd1I"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="column column-video">
+            <iframe src="https://www.youtube.com/embed/WYOE6LcZ6_k?si=DfiNJ7w0ECzPWDgl"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Dyn (proposed)</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Best time-to-goal</li>
+                <li>Risk tolerance alpha = 0.9</li>
+                <li>The robot walked very closely to the tall grass.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Cost</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Risk tolerance alpha = 0.8</li>
+                <li>A lot of unnecessary turns due to poor solution quality.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <h4 class="subtitle" style="margin-bottom: 10px">Baseline</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 60%; display: inline-block;">
+                <li>Grass / bush penalty = 20</li>
+                <li>The robot walked away from tall grass to stay on easier terrain.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="subtitle" style="margin-bottom: 10px">Benefits of Avoiding OOD Terrains</h4>
+            <div style="text-align:center;">
+              <ol style="text-align: left; max-width: 80%; display: inline-block;">
+                <li>By avoiding OOD terrains, the planner was less prone to getting stuck in local minima due to
+                  imperfect map information and unreliable traction estimation.</li>
+                <li>Without avoiding OOD terrains, the planner was stuck in local minima and the human had to intervene.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <iframe src="https://www.youtube.com/embed/8L5t4nYg1ak?si=7wV7DCmVblEJempi"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Outdoor -->
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cai2023evora,
+      title={EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy},
+      author={Cai, Xiaoyi and Ancha, Siddharth and Sharma, Lakshay and Osteen, Philip R. and Bucher, Bernadette and Philips, Stephen and Wang, Jiuguang and Everett, Michael and Roy, Nicholas and How, Jonathan P.},
+      journal={arXiv preprint arXiv:tba},
+      year={2023}
+    }</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>
+              Website template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
+                href="https://peract.github.io/">PerAct</a> under a Creative Commons Attribution-ShareAlike 4.0
+              International License.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
