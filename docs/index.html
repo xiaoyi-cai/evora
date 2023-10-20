@@ -177,22 +177,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Fast navigation in the wild requires identifying regions with good traction where a robot can reliably
-              achieve desired velocities, which can be learned by a neural network in a self-supervised fashion.
-              However, real-world traction data is often noisy and contains randomness that cannot be reduced with more
-              data (aleatoric uncertainty) and the scarcity makes learned models unreliable in novel terrains (epistemic
-              uncertainty). To fully exploit the learned traction models, this work explicitly and efficiently
-              quantifies aleatoric and epistemic uncertainties via evidential deep learning, by predicting distributions
-              over discretized traction values and estimating the probability density of the network's latent features,
-              respectively. Moreover, we propose an uncertainty-aware squared Earth Mover's Distance loss that better
-              captures the cross-bin relationships among discrete traction values, can be computed analytically in
-              closed form, and leads to better navigation performance than cross-entropy based losses. During
-              deployment, when traction predictions are reliable, we design a risk-aware planner based on the worst-case
-              expected traction in order to trade off the risk of getting stuck and the potential time savings from
-              traversing terrains with uncertain traction. When the learned models are unreliable, we show that avoiding
-              the associated terrains via auxiliary planning costs improves navigation success rate. The overall
-              approach is extensively analyzed in simulation and on wheeled and quadruped robot platforms, demonstrating
-              improved navigation, real-world feasibility, and generalization across different ground robots.
+              Traversing terrains with good traction is crucial for achieving fast off-road navigation. 
+              Instead of manually designing costs based on terrain features, existing methods learn terrain 
+              properties directly from data via self-supervision, but challenges remain to properly quantify 
+              and mitigate risks due to uncertainties in learned models. This work efficiently quantifies both 
+              aleatoric and epistemic uncertainties by learning discrete traction distributions and probability 
+              densities of the traction predictor's latent features. Leveraging evidential deep learning, 
+              we parameterize Dirichlet distributions with the network outputs and propose a novel 
+              uncertainty-aware squared Earth Mover's distance loss with a closed-form expression that 
+              improves learning accuracy and navigation performance. The proposed risk-aware planner simulates 
+              state trajectories with the worst-case expected traction to handle aleatoric uncertainty, and penalizes 
+              terrains with high epistemic uncertainty. The overall approach is extensively validated in simulation and 
+              on wheeled and quadruped robots, showing improved navigation performance compared to methods that assume 
+              no slip, assume the expected traction, or optimize for the worst-case expected cost.
             </p>
           </div>
         </div>
