@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy">
-  <meta name="keywords" content="Traversability Analysis, Navigation, Robotics">
+  <meta name="keywords" content="Traversability Analysis, Navigation, Robotics, Risk-Aware Planning, Evidential Deep Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy</title>
 
@@ -65,7 +65,7 @@
                 <a target="_blank" href="https://bucherb.github.io">Bernadette Bucher</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://www.linkedin.com/in/stephen-phillips-4ab09935/">Stephen
+                <a target="_blank" href="https://stephenphillips.xyz/">Stephen
                   Phillips</a><sup>3</sup>,
               </span>
               <span class="author-block">
@@ -95,7 +95,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a target="_blank" href="evora.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a target="_blank" href="https://arxiv.org/pdf/2311.06234.pdf" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -105,17 +105,17 @@
 
                 <!-- Arxiv Link. -->
                 <span class="link-block">
-                  <a target="_blank" href="evora.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a target="_blank" href="https://arxiv.org/abs/2311.06234" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file"></i>
                     </span>
-                    <span>ArXiv (Coming Soon)</span>
+                    <span>arXiv</span>
                   </a>
                 </span>
 
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a target="_blank" href="https://youtu.be/XlRQYyQ39lk" class="external-link button is-normal is-rounded is-dark">
+                  <a target="_blank" href="https://youtu.be/pV7GxAFYuto" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -160,7 +160,7 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-two-thirds">
               <div class="publication-video">
-                <iframe src="https://www.youtube.com/embed/XlRQYyQ39lk?si=0v4heRwsCxtfowJe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/pV7GxAFYuto?si=k_uBsWPdHqJYV65B" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -177,19 +177,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Traversing terrains with good traction is crucial for achieving fast off-road navigation. 
-              Instead of manually designing costs based on terrain features, existing methods learn terrain 
-              properties directly from data via self-supervision, but challenges remain to properly quantify 
-              and mitigate risks due to uncertainties in learned models. This work efficiently quantifies both 
-              aleatoric and epistemic uncertainties by learning discrete traction distributions and probability 
-              densities of the traction predictor's latent features. Leveraging evidential deep learning, 
-              we parameterize Dirichlet distributions with the network outputs and propose a novel 
-              uncertainty-aware squared Earth Mover's distance loss with a closed-form expression that 
-              improves learning accuracy and navigation performance. The proposed risk-aware planner simulates 
-              state trajectories with the worst-case expected traction to handle aleatoric uncertainty, and penalizes 
-              terrains with high epistemic uncertainty. The overall approach is extensively validated in simulation and 
-              on wheeled and quadruped robots, showing improved navigation performance compared to methods that assume 
-              no slip, assume the expected traction, or optimize for the worst-case expected cost.
+              Traversing terrain with good traction is crucial for achieving fast off-road navigation. Instead of manually designing costs based on terrain features, existing methods learn terrain properties directly from data via self-supervision, but challenges remain to properly quantify and mitigate risks due to uncertainties in learned models. This work efficiently quantifies both aleatoric and epistemic uncertainties by learning discrete traction distributions and probability densities of the traction predictor's latent features. Leveraging evidential deep learning, we parameterize Dirichlet distributions with the network outputs and propose a novel uncertainty-aware squared Earth Mover's distance loss with a closed-form expression that improves learning accuracy and navigation performance. The proposed risk-aware planner simulates state trajectories with the worst-case expected traction to handle aleatoric uncertainty, and penalizes trajectories moving through terrain with high epistemic uncertainty. Our approach is extensively validated in simulation and on wheeled and quadruped robots, showing improved navigation performance compared to methods that assume no slip, assume the expected traction, or optimize for the worst-case expected cost.
             </p>
           </div>
         </div>
@@ -403,8 +391,8 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{cai2023evora,
       title={EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy},
-      author={Cai, Xiaoyi and Ancha, Siddharth and Sharma, Lakshay and Osteen, Philip R. and Bucher, Bernadette and Philips, Stephen and Wang, Jiuguang and Everett, Michael and Roy, Nicholas and How, Jonathan P.},
-      journal={arXiv preprint arXiv:tba},
+      author={Cai, Xiaoyi and Ancha, Siddharth and Sharma, Lakshay and Osteen, Philip R. and Bucher, Bernadette and Phillips, Stephen and Wang, Jiuguang and Everett, Michael and Roy, Nicholas and How, Jonathan P.},
+      journal={arXiv preprint arXiv:2311.06234},
       year={2023}
     }</code></pre>
     </div>
